@@ -12,6 +12,8 @@ export class CalculatorComponent implements OnInit {
   private number2:string;
   private operation:string;
   private result:number;
+  private aux_num1:string;
+  private aux_num2:string;
 
   constructor(private calculatorService: CalculatorService) { }
 
@@ -51,12 +53,15 @@ export class CalculatorComponent implements OnInit {
   }
 
   defineOperation(operation: string): void {
+    this.aux_num1 = parseFloat(this.number1).toFixed(2);
+    this.aux_num2 = parseFloat(this.number2).toFixed(2);
+
     if(this.operation === null){
       this.operation = operation;
       return;
     }
     if(this.number2 !== null){
-      this.result = this.calculatorService.calcular(parseFloat(this.number1), parseFloat(this.number2), this.operation);
+      this.result = this.calculatorService.calcular(parseFloat(this.aux_num1), parseFloat(this.aux_num2), this.operation);
       this.operation = operation;
       this.number1 = this.result.toString();
       this.number2 = null;
@@ -68,7 +73,10 @@ export class CalculatorComponent implements OnInit {
     if(this.number2 === null){
       return;
     }
-    this.result = this.calculatorService.calcular(parseFloat(this.number1), parseFloat(this.number2), this.operation);
+    this.aux_num1 = parseFloat(this.number1).toFixed(2);
+    this.aux_num2 = parseFloat(this.number2).toFixed(2);
+
+    this.result = this.calculatorService.calcular(parseFloat(this.aux_num1), parseFloat(this.aux_num2), this.operation);
   }
 
   get display(): string {
