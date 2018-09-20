@@ -1,0 +1,75 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.title{
+    text-align: center;
+    font-size: 28px;
+}
+.calculator{
+    width: 100%;
+}
+.container-aux-calc{
+    width: 500px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-fluid{
+    margin: auto;
+}
+.kz-btn {
+    margin: 4px;
+    width: 70px;
+    height: 70px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgb(87, 86, 86);
+    -moz-box-shadow: 5px 5px 5px 0px rgb(87, 86, 86);
+    box-shadow: 5px 5px 5px 0px rgb(87, 86, 86);
+    font-size: 22px;
+    font-weight: 700;
+}
+.kz-btn:hover {
+    transform: scale(1.05);
+}
+.kz-input-text {
+    margin-top: 3px;
+    width: 91%;
+    margin-left: 6px;
+    height: 66px;
+    font-size: 32px;
+    background-color: aliceblue;
+}
+.kz-pad {
+	padding: 32px;
+}
+.cancel-btn{
+    background-color: #D00000;
+}
+.oper-btn{
+    background-color: #F29E4C;
+    color: #fff;
+}
+.number-btn{
+    background-color: aliceblue;
+    color: #606060;
+}
+.equal-btn{
+    background-color: #A5C882;
+}
+.col-xs-3, .col-xs-9 {
+	padding: 0px;
+}
+.container-calculator{
+    height: 455px;
+    background-color: #31708f;
+}
+.btn-warning{
+    border-color: transparent;
+}
+.btn-default{
+    border-color: transparent;
+}
+.created{
+    text-align: center; 
+    margin-top: 20px;
+    font-weight: 700;
+}
