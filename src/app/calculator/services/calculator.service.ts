@@ -13,25 +13,25 @@ export class CalculatorService {
   constructor() { }
 
   calcular(num1: number, num2: number, operacao: string):number{
-    let resultado: number;
+    let result: number;
 
     switch(operacao){
       case(CalculatorService.SOMA):
-        resultado = num1 + num2;
+        result = num1 + num2;
       break;
       case(CalculatorService.SUBTRACAO):
-        resultado = num1 - num2;
+        result = num1 - num2;
       break;
       case(CalculatorService.DIVISAO):
-        resultado = num1 / num2;
+        result = num1 / num2;
       break;
       case(CalculatorService.MULTIPLICACAO):
-        resultado = num1 * num2;
+        result = num1 * num2;
       break;
       default:
-        resultado = 0;
+        result = 0;
     }
 
-    return resultado;
+    return result;
   }
 }
