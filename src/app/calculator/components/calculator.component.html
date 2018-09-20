@@ -1,7 +1,7 @@
 <div class="calculator">
   <div class="container-background">
     <div class="container-fluid">
-      <form>
+      <!-- <form> -->
         <div class="row">
           <h1 class="title">SIMPLE CALCULATOR WITH ANGULAR</h1>
           <div class="container-aux-calc">
@@ -9,66 +9,66 @@
             <div class="text-center container-calculator img-rounded kz-pad">
               <div class="row">
                 <div class="col-xs-3">
-                  <button mat-fab color="warn" class="kz-btn clear-btn">C</button>
+                  <button mat-fab color="warn" class="kz-btn clear-btn" (click)="limpar()">C</button>
                 </div>
                 <div class="col-xs-9">
-                    <input type="text" class="form-control text-right kz-input-text" id="display" name="display" readonly>
+                    <input type="text" class="form-control text-right kz-input-text" id="display" name="display" [value]="display" readonly>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn7">7</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn7" (click)="addNumber('7')">7</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn8">8</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn8" (click)="addNumber('8')">8</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn9">9</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn9" (click)="addNumber('9')">9</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnDivisao">/</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn4">4</button>
-                </div>
-                <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn5">5</button>
-                </div>
-                <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn6">6</button>
-                </div>
-                <div class="col-xs-3">
-                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnMIltiplicacao">*</button>
+                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnDivisao" (click)="defineOperation('/')">/</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn1">1</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn4" (click)="addNumber('4')">4</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn2">2</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn5" (click)="addNumber('5')">5</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn3">3</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn6" (click)="addNumber('6')">6</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnSubtracao">-</button>
+                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnMIltiplicacao" (click)="defineOperation('*')">*</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btn0">0</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn1" (click)="addNumber('1')">1</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn number-btn" id="btnDecimal">.</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn2" (click)="addNumber('2')">2</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab class="kz-btn equal-btn" id="btnCalcular">=</button>
+                  <button mat-fab class="kz-btn number-btn" id="btn3" (click)="addNumber('3')">3</button>
                 </div>
                 <div class="col-xs-3">
-                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnSoma">+</button>
+                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnSubtracao" (click)="defineOperation('-')">-</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-3">
+                  <button mat-fab class="kz-btn number-btn" id="btn0" (click)="addNumber('0')">0</button>
+                </div>
+                <div class="col-xs-3">
+                  <button mat-fab class="kz-btn number-btn" id="btnDecimal" (click)="addNumber('.')">.</button>
+                </div>
+                <div class="col-xs-3">
+                  <button mat-fab class="kz-btn equal-btn" id="btnCalcular" (click)="calcular()">=</button>
+                </div>
+                <div class="col-xs-3">
+                  <button mat-fab color="warn" class="kz-btn oper-btn" id="btnSoma" (click)="defineOperation('+')">+</button>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@
           </div>
         </div>
         <h4 class="created">Created by Malena Caroline</h4>
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 </div>
