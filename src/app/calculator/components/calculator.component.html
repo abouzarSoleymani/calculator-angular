@@ -1,7 +1,7 @@
-<div class="calculator">
+<!--<div class="calculator">
   <div class="container-background">
     <div class="container-fluid">
-      <!-- <form> -->
+      &lt;!&ndash; <form> &ndash;&gt;
         <div class="row">
           <h1 class="title">SIMPLE CALCULATOR WITH ANGULAR</h1>
           <div class="container-aux-calc">
@@ -76,7 +76,36 @@
           </div>
         </div>
         <h4 class="created">Created by Malena Caroline</h4>
-      <!-- </form> -->
+      &lt;!&ndash; </form> &ndash;&gt;
     </div>
   </div>
+</div>-->
+<div class="container-fluid">
+  <div class="container-body">
+  <div class="result">
+    <p>{{display}}</p>
+  </div>
+  <div class="buttons">
+    <div class="button action-btn" (click)="limpar()"> AC </div>
+    <div class="button action-btn"> MC</div>
+    <div class="button action-btn">%</div>
+    <div class="button calc-action-btn" (click)="defineOperation('/')"> /</div>
+    <div class="button seven" (click)="addNumber('7')">7</div>
+    <div class="button eight" (click)="addNumber('8')">8</div>
+    <div class="button nine" (click)="addNumber('9')">9</div>
+    <div class="button calc-action-btn" (click)="defineOperation('*')">X</div>
+    <div class="button four" (click)="addNumber('4')">4</div>
+    <div class="button five" (click)="addNumber('5')">5</div>
+    <div class="button six" (click)="addNumber('6')">6</div>
+    <div class="button calc-action-btn" (click)="defineOperation('-')">-</div>
+    <div class="button one active" (click)="addNumber('1'); status =! status;">1</div>
+    <div class="button two" (click)="addNumber('2')">2</div>
+    <div class="button three" (click)="addNumber('3')">3</div>
+    <div class="button calc-action-btn" (click)="defineOperation('+')">+</div>
+    <div class="button zero" (click)="addNumber('0')">0</div>
+    <div class="button point" (click)="addNumber('.')">.</div>
+    <div class="button  equal" (click)="calcular()">=</div>
+  </div>
+
+</div>
 </div>

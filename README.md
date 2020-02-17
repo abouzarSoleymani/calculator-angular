@@ -5,7 +5,7 @@ This project was created with:
  Bootstrap v3.3.7
  Angular Material 
  
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/abouzarSoleymani/calculator-angular/tree/master/src/assets/calculator.jpg)
 
 ## Development server
 

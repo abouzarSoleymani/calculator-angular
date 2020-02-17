@@ -4,7 +4,7 @@ import { CalculatorService } from '../services';
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
 
@@ -40,7 +40,7 @@ export class CalculatorComponent implements OnInit {
     //case just value 0 or null, restart value
     if(numCurrent === '0' || numCurrent === null){
       numCurrent = '';
-    } 
+    }
     //first value is '.', concat 0 before '.'
     if(numConcat === '.' && numCurrent === ''){
       return '0.';
